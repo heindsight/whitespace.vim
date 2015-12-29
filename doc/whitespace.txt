@@ -1,0 +1,86 @@
+*whitespace.vim*	Highlight and remove extraneous whitespace
+
+==============================================================================
+CONTENTS				*whitespace* *whitespace-contents*
+
+	INSTALLATION..........................: |whitespace-installation|
+	COMMANDS..............................: |whitespace-commands|
+	CUSTOMISING...........................: |whitespace-customising|
+	ABOUT.................................: |whitespace-about|
+	LICENSE...............................: |whitespace-license|
+
+==============================================================================
+INSTALLATION				*whitespace-installation*
+
+You can use your favourite installation method. With Tim Pope's pathogen
+(https://github.com/tpope/vim-pathogen) it is simply a question of cloning the
+whitespace.vim repository into your vim bundle directory.
+>
+	cd ~/.vim/bundle
+	git clone git://github.com/heindsight/whitespace.vim
+<
+
+==============================================================================
+COMMANDS				*whitespace-commands*
+
+:WSHighlightOn				*:WSHighlightOn*
+	Turn on highlighting of end-of-line whitespace. Any trailing
+	whitespace will be highlighted using the |ExtraWhitespace| highlight
+	group.
+
+:WSHighlightOff				*:WSHighlightOff*
+	Turn off end-of-line whitespace highlighting.
+
+:WSHighlightToggle			*:WSHighlightToggle*
+	Toggle end-of-line whitespace highlighting.
+
+:[range]WSStrip				*WSStrip*
+	Delete all end-of-line whitespace. This is equivalent to:
+>
+		:[range]s/\s\+$//
+<
+
+==============================================================================
+CUSTOMISING				*whitespace-customising*
+
+ExtraWhitespace				*ExtraWhitespace*
+	By default, the ExtraWhitespace highlight group is linked to the
+	standard Error group (see |group-name|). The |:highlight| command can
+	be used to customize highlighting. For example:
+>
+		highlight ExtraWhitespace ctermbg=Green
+<
+
+==============================================================================
+ABOUT					*whitespace-about*
+
+You can always get the latest version on GitHub. Bug reports, suggestions and
+pull requests are welcome!
+
+http://github.com/heindsight/whitespace.vim
+
+==============================================================================
+LICENSE					*whitespace-license*
+
+Copyright (c) 2015 Heinrich Kruger
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+vim:tw=78:ts=8:ft=help:norl:
+
